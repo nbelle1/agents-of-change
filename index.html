@@ -148,6 +148,23 @@
 </section> -->
 <!-- End teaser video -->
 
+<!-- Featured Image - Catan gameplay overview -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/gameplay.png" alt="Catan gameplay and LLM-agent interaction"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Overview of Catan gameplay and LLM-agent interaction.</b> Left: <i>Settlers of Catan</i> – Players take turns to gather, trade, and spend resources to build on a modular board in a stochastic, partially observable strategy game. The objective is to reach 10 victory points by constructing settlements, roads, and cities. Right: Our LLM-based framework interacts with the Catanatron API, leveraging game state information and strategic reasoning to decide actions. Through repeated play and self-modification, agents evolve more coherent long-term strategies.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End featured image -->
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -166,8 +183,56 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Agent Architectures Figure -->
 <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered">Agent Architectures</h2>
+          <img src="static/images/agents_wide.png" alt="LLM-based Agent Architectures"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Diagrams of the LLM-based Agent Architectures.</b> Baseline agents use LLMs to map Catan game states to actions by direct prompting (BaseAgent) or structured formatting (StructuredAgent). PromptEvolver adds a multi-agent loop where prompts are iteratively refined via analysis and summarization. AgentEvolver enables autonomous code evolution, with the Analyzer, Researcher, Coder, and Strategizer agents collaboratively redesigning player logic from gameplay feedback.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End agent architectures figure -->
+
+<!-- Results carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/scores.png" alt="Agent performance scores"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Agent performance across models (avg score and avg turns).</b>
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/score2.png" alt="Performance comparison"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Performance comparison across LLM-agent architectures and model backends.</b> Left: Average number of turns taken to complete the game across architectures. Higher values such as Claude-3.7 PromptEvolver indicate a more competitive game against the AlphaBeta opponent. Right: Average Victory Points (VP) achieved, showing that self-improving agents (PromptEvolver and AgentEvolver) outperform baseline agents, especially when paired with more capable LLMs like GPT-4o and Claude 3.7.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/evolution.png" alt="Evolution performance"/>
+          <h2 class="subtitle has-text-centered">
+            <b>Evolution performance of LLM agents over time.</b> Average Victory Points (VP) across evolution steps for each model (Mistral Large, Claude 3.7, GPT-4o). PromptEvolver consistently improves with more iterations, especially when paired with stronger models like Claude 3.7 and GPT-4o. AgentEvolver shows variable performance gains, while static baselines (BaseAgent, StructuredAgent) remain flat.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End results carousel -->
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -178,50 +243,33 @@
           </h2>
         </div>
        <div class="item">
-        <!-- Your image here -->
         <img src="static/images/agents_wide.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
            <b>Diagrams of the LLM-based Agent Architectures.</b> Baseline agents use LLMs to map Catan game states to actions by direct prompting (BaseAgent) or structured formatting (StructuredAgent). PromptEvolver adds a multi-agent loop where prompts are iteratively refined via analysis and summarization. AgentEvolver enables autonomous code evolution, with the Analyzer, Researcher, Coder, and Strategizer agents collaboratively redesigning player logic from gameplay feedback.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/scores.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
            <b>Agent performance across models (avg score and avg turns).</b>
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/score2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
            <b>Performance comparison across LLM-agent architectures and model backends.</b> Left: Average number of turns taken to complete the game across architectures. Higher values such as Claude-3.7 PromptEvolver indicate a more competitive game against the AlphaBeta opponent. Right: Average Victory Points (VP) achieved, showing that self-improving agents (PromptEvolver and AgentEvolver) outperform baseline agents, especially when paired with more capable LLMs like GPT-4o and Claude 3.7.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/evolution.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
            <b>Evolution performance of LLM agents over time.</b> Average Victory Points (VP) across evolution steps for each model (Mistral Large, Claude 3.7, GPT-4o). PromptEvolver consistently improves with more iterations, especially when paired with stronger models like Claude 3.7 and GPT-4o. AgentEvolver shows variable performance gains, while static baselines (BaseAgent, StructuredAgent) remain flat.
         </h2>
       </div>
-
-      <!-- <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div> -->
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
